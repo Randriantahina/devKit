@@ -11,4 +11,3 @@ fi
 
 # Set complete path
 export PATH="./bin:$HOME/.local/bin:$HOME/.local/share/devkit/bin:$PATH"
-set +h
