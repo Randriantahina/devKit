@@ -1,0 +1,5 @@
+source ~/.local/share/devkit/configs/bash/shell
+source ~/.local/share/devkit/configs/bash/aliases
+source ~/.local/share/devkit/configs/bash/functions
+source ~/.local/share/devkit/configs/bash/prompt
+source ~/.local/share/devkit/configs/bash/init
