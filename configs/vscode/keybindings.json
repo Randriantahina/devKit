@@ -1,0 +1,18 @@
+[
+  {
+    "key": "ctrl+q",
+    "command": "type",
+    "args": {
+      "text": "<",
+    },
+    "when": "editorTextFocus",
+  },
+  {
+    "key": "ctrl+e",
+    "command": "type",
+    "args": {
+      "text": ">",
+    },
+    "when": "editorTextFocus",
+  },
+]

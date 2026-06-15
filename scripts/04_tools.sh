@@ -4,16 +4,20 @@ log "04 — Création des symlinks pour les outils..."
 
 mkdir -p "$HOME/.local/bin"
 
-# bat : Ubuntu installe le binaire sous le nom 'batcat'
-if command -v batcat &>/dev/null && ! command -v bat &>/dev/null; then
-    ln -sf "$(command -v batcat)" "$HOME/.local/bin/bat"
-    info "Symlink bat → batcat créé"
-fi
+# Sur Ubuntu/Debian, apt renomme les binaires pour éviter les conflits de noms.
+# Sur Arch, les noms sont directs — aucun symlink nécessaire.
+if [ "$DISTRO" = "debian" ]; then
+    # bat → batcat
+    if command -v batcat &>/dev/null && ! command -v bat &>/dev/null; then
+        ln -sf "$(command -v batcat)" "$HOME/.local/bin/bat"
+        info "Symlink bat → batcat créé"
+    fi
 
-# fd : Ubuntu installe le binaire sous le nom 'fdfind'
-if command -v fdfind &>/dev/null && ! command -v fd &>/dev/null; then
-    ln -sf "$(command -v fdfind)" "$HOME/.local/bin/fd"
-    info "Symlink fd → fdfind créé"
+    # fd → fdfind
+    if command -v fdfind &>/dev/null && ! command -v fd &>/dev/null; then
+        ln -sf "$(command -v fdfind)" "$HOME/.local/bin/fd"
+        info "Symlink fd → fdfind créé"
+    fi
 fi
 
 # Vérifie que tous les outils critiques sont présents

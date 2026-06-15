@@ -60,14 +60,3 @@ else
 fi
 
 log "05 — Dotfiles déployés."
-log ""
-log "====================================================="
-log "  Devkit installé avec succès !"
-log "====================================================="
-log ""
-log "  Prochaines étapes :"
-log "  1. Lance : exec bash"
-log "  2. Ouvre Alacritty"
-log "  3. Consulte les raccourcis : cat ~/devkit/SHORTCUTS.md"
-log ""
-log "  NvChad n'a pas été touché."

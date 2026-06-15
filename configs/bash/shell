@@ -9,5 +9,9 @@ if [ -f /usr/share/bash-completion/bash_completion ]; then
   source /usr/share/bash-completion/bash_completion
 fi
 
+# Flutter & Android
+export ANDROID_HOME="$HOME/Android/Sdk"
+export ANDROID_SDK_ROOT="$ANDROID_HOME"
+
 # Set complete path
-export PATH="./bin:$HOME/.local/bin:$HOME/.local/share/devkit/bin:$PATH"
+export PATH="./bin:$HOME/.local/bin:$HOME/.local/share/devkit/bin:$HOME/.composer/vendor/bin:$HOME/flutter/flutter/bin:$ANDROID_HOME/cmdline-tools/latest/bin:$ANDROID_HOME/platform-tools:$PATH"
